@@ -10,5 +10,4 @@ public class TestController2 {
     public String hello(){
         return "hello";
     }
-
 }
