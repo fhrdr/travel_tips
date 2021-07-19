@@ -10,7 +10,7 @@ import java.util.Date;
 @Table(schema = "travel_tips",name = "t_user")
 public class User {
   @Id
-  private long id;
+  private int id;
   @Column(name = "username")
   private String username;
   @Column(name = "password")
@@ -42,17 +42,16 @@ public class User {
   @Column(name = "fan_Num")
   private long fanNum;
   @Column(name = "create_Time")
-  private java.sql.Timestamp createTime;
+  private Date createTime;
 
 
-  public long getId() {
+  public int getId() {
     return id;
   }
 
-  public void setId(long id) {
+  public void setId(int id) {
     this.id = id;
   }
-
 
   public String getUsername() {
     return username;
@@ -188,13 +187,34 @@ public class User {
     this.fanNum = fanNum;
   }
 
-
-  public java.sql.Timestamp getCreateTime() {
+  public Date getCreateTime() {
     return createTime;
   }
 
-  public void setCreateTime(java.sql.Timestamp createTime) {
+  public void setCreateTime(Date createTime) {
     this.createTime = createTime;
   }
 
+  @Override
+  public String toString() {
+    return "User{" +
+            "id=" + id +
+            ", username='" + username + '\'' +
+            ", password='" + password + '\'' +
+            ", wechat='" + wechat + '\'' +
+            ", avatar=" + avatar +
+            ", sex='" + sex + '\'' +
+            ", level=" + level +
+            ", experience=" + experience +
+            ", balance=" + balance +
+            ", phone='" + phone + '\'' +
+            ", introduce='" + introduce + '\'' +
+            ", role='" + role + '\'' +
+            ", postNum=" + postNum +
+            ", collectionNum=" + collectionNum +
+            ", followNum=" + followNum +
+            ", fanNum=" + fanNum +
+            ", createTime=" + createTime +
+            '}';
+  }
 }
